@@ -1,0 +1,3 @@
+node -v  # Check Node version
+npm -v   
+node_modules
