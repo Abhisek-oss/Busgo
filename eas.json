@@ -1,21 +1,11 @@
 {
   "cli": {
-    "version": ">= 16.13.2",
-    "appVersionSource": "remote"
+    "version": ">= 3.18.0"
   },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
-    },
-    "preview": {
-      "distribution": "internal"
-    },
-    "production": {
-      "autoIncrement": true
+    "android": {
+      "image": "eas-android-ndk-jdk17",
+      "gradleCommand": ":app:bundleRelease"
     }
-  },
-  "submit": {
-    "production": {}
   }
 }
