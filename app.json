@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "greenery",
+    "slug": "snack-edb28bd6-3810-4423-8e13-2f23c6603de3",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.abhisek_sah.snackedb28bd6381044238e132f23c6603de3"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ab8b33b8-c407-425b-9a5d-bab18bc1f1ab"
+      }
+    }
+  }
+}
