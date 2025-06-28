@@ -1,0 +1,38 @@
+name: Build Android APK
+
+on:
+  push:
+      branches:
+            - main  # or your default branch
+
+            jobs:
+              build:
+                  runs-on: ubuntu-latest
+
+                      steps:
+                          - name: Checkout code
+                                uses: actions/checkout@v3
+
+                                    - name: Set up JDK 17
+                                          uses: actions/setup-java@v3
+                                                with:
+                                                        distribution: 'temurin'
+                                                                java-version: '17'
+
+                                                                    - name: Download Gradle Wrapper Cache
+                                                                          uses: actions/cache@v3
+                                                                                with:
+                                                                                        path: ~/.gradle
+                                                                                                key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}
+                                                                                                        restore-keys: |
+                                                                                                                  ${{ runner.os }}-gradle-
+
+                                                                                                                      - name: Build Debug APK
+                                                                                                                            run: ./gradlew assembleDebug
+                                                                                                                                  working-directory: ./android
+
+                                                                                                                                      - name: Upload APK artifact
+                                                                                                                                            uses: actions/upload-artifact@v3
+                                                                                                                                                  with:
+                                                                                                                                                          name: app-debug.apk
+                                                                                                                                                                  path: android/app/build/outputs/apk/debug/app-debug.apk
