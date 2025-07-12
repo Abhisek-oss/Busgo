@@ -1,0 +1,18 @@
+{
+  "name": "bus-backend",
+  "version": "1.0.0",
+  "description": "Backend for bus ticket booking app like RedBus",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["bus", "booking", "backend"],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  }
+}
